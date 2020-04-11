@@ -1,4 +1,4 @@
-# BABY MARCOS APP
+# BABY MARCOS APP 👶
 
 Esta pequeña app la cree para registrar cosas de Marcos Rafael.
 
