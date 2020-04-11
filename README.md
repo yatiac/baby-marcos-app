@@ -31,6 +31,6 @@ Todo esto te lo da firebase cuando agregas un app a tu proyecto.
 
 ## TODO
  
- [] Agregar Login
- [] Registrar Vacunas
- [] Registrar idas al médico
+- [ ] Agregar Login
+- [ ] Registrar Vacunas
+- [ ] Registrar idas al médico
