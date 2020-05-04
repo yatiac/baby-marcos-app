@@ -9,6 +9,7 @@ import BottomNavigationAction from "@material-ui/core/BottomNavigationAction";
 import ChildFriendlyIcon from "@material-ui/icons/ChildFriendly";
 import RestaurantIcon from "@material-ui/icons/Restaurant";
 import HomeIcon from '@material-ui/icons/Home';
+import HotelIcon from '@material-ui/icons/Hotel';
 
 import "./Navbar.css";
 
@@ -56,6 +57,11 @@ const Navbar = () => {
         label="Comida"
         icon={<RestaurantIcon />}
         value="feeding"
+      />
+      <BottomNavigationAction
+        label="Sueño"
+        icon={<HotelIcon />}
+        value="sleep"
       />
       {/* <BottomNavigationAction label="Nearby" icon={<RestaurantIcon />} value="diapers" /> */}
     </BottomNavigation>
