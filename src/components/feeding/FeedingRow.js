@@ -8,6 +8,7 @@ import ListItemSecondaryAction from "@material-ui/core/ListItemSecondaryAction";
 import IconButton from "@material-ui/core/IconButton";
 import DeleteIcon from "@material-ui/icons/Delete";
 import DeleteFeeding from "./DeleteFeeding";
+import { ListItemAvatar, Avatar } from "@material-ui/core";
 
 const FeedingRow = ({ record }) => {
   const [open, setOpen] = useState(false);
@@ -21,18 +22,18 @@ const FeedingRow = ({ record }) => {
   return (
     <React.Fragment>
       <ListItem button>
+        <ListItemAvatar>
+          
+            {record.type === "breast" ? (
+              <img src={breast} alt="" width="30px" />
+            ) : (
+              <img src={bottle} alt="" width="30px" />
+            )}
+          
+        </ListItemAvatar>
         <ListItemText
+          secondary={<React.Fragment>{record.date}</React.Fragment>}
           primary={
-            <React.Fragment>
-              {record.date}
-              {record.type === "breast" ? (
-                <img src={breast} alt="" width="25px" />
-              ) : (
-                <img src={bottle} alt="" width="25px" />
-              )}
-            </React.Fragment>
-          }
-          secondary={
             <React.Fragment>
               {record.amount} {record.type === "breast" ? "minutos" : "onza(s)"}
             </React.Fragment>
@@ -44,7 +45,7 @@ const FeedingRow = ({ record }) => {
           </IconButton>
         </ListItemSecondaryAction>
       </ListItem>
-      <DeleteFeeding handleClose={handleClose} open={open} id={record.id}/>
+      <DeleteFeeding handleClose={handleClose} open={open} id={record.id} />
     </React.Fragment>
   );
 };
